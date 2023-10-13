@@ -18,4 +18,8 @@ export class AnswersComponent implements OnInit {
     this.answers = this.formService.getResults();
   }
 
+  goToForm(): void {
+    this.router.navigate(['form', 'builder']);
+  }
+
 }
