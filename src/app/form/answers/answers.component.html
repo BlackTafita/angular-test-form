@@ -1,1 +1,12 @@
-<p>answers works!</p>
+<mat-card>
+  <mat-card-content>
+    <section class="question-block" *ngFor="let answer of answers">
+        <span class="question">{{answer.question}}</span>
+        <span *ngIf="answer.type === 'text'">{{answer.answer}}</span>
+        <ul *ngIf="answer.type === 'checkbox'">
+          <li *ngFor="let a of answer.checkboxes">{{a}}</li>
+          <li *ngIf="answer.other">Other - {{answer.other}}</li>
+        </ul>
+    </section>
+  </mat-card-content>
+</mat-card>

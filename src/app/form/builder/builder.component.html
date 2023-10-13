@@ -16,6 +16,11 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-button (click)="openAddQuestionDialog()">Add New Question</button>
-    <button mat-button color="primary" [disabled]="form.invalid">Review my answers</button>
+    <button *ngIf="questionsFormArray.controls.length"
+            mat-button
+            color="primary"
+            [disabled]="form.invalid"
+            (click)="submit()"
+    >Review my answers</button>
   </mat-card-actions>
 </mat-card>
