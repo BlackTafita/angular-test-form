@@ -1,0 +1,9 @@
+form {
+  display: flex;
+  flex-direction: column;
+
+  .answer-options {
+    display: flex;
+    flex-direction: column;
+  }
+}

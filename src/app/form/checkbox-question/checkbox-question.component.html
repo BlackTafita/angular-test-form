@@ -1,0 +1,14 @@
+<section [formGroup]="form">
+  <div class="checkboxes" formArrayName="checkboxes">
+    <mat-label>{{question.question}}</mat-label>
+    <mat-checkbox
+      *ngFor="let checkbox of question.answers;let ch = index"
+      [formControlName]="ch"
+    > {{checkbox}}</mat-checkbox>
+  </div>
+  <mat-checkbox *ngIf="question.ownAnswer" name="other-checkbox" [formControl]="isOtherSelected">Other</mat-checkbox>
+  <mat-form-field class="other-input" *ngIf="isOtherSelected.value">
+    <mat-label>Write you option</mat-label>
+    <input matInput formControlName="other">
+  </mat-form-field>
+</section>

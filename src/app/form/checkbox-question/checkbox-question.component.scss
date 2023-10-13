@@ -1,0 +1,12 @@
+section {
+  display: flex;
+  flex-direction: column;
+  .checkboxes {
+    display: flex;
+    flex-direction: column;
+
+    mat-label {
+      font-weight: bold;
+    }
+  }
+}
